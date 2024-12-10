@@ -1,0 +1,200 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 20px 0;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 5px 0 0;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Button Colors */
+.green-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.green-btn:hover {
+    background-color: #27ae60;
+}
+
+.blue-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.blue-btn:hover {
+    background-color: #2980b9;
+}
+
+.red-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.red-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Popup Container */
+.popup-container {
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup-description {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.popup-zones {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.popup-zones li {
+    margin-bottom: 10px;
+}
+
+/* Style for buttons in the popup */
+.popup-zones button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1.5px solid #111111;
+    color: #000000;
+    /* White text color for contrast */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-zones button:hover {
+    opacity: 0.8;
+    /* Slight transparency on hover */
+}
+
+/* Options Page */
+.options-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.options-description {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+.zone-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.zone {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f4f4f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Zone Title in Options Page */
+.setup-title {
+    font-size: 20px;
+    /* Increase font size to make it more prominent */
+    font-weight: bold;
+    /* Make it bold */
+    color: #2c3e50;
+    /* Keep the dark color for better visibility */
+    margin-bottom: 10px;
+    /* Add space below the title for better spacing */
+}
+
+.zone-links {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.zone-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.zone-link span {
+    word-wrap: break-word;
+    font-size: 14px;
+    color: #555;
+}
+
+.zone-link .red-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+/* Dropdown Styling */
+.color-dropdown {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 10px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+}
+
+.color-dropdown:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.color-dropdown option {
+    font-size: 14px;
+    padding: 5px;
+}
