@@ -1,0 +1,6 @@
+{
+    "version": "1.1.0",
+    "updateType": "mandatory",
+    "changelog": "Bug Fixes",
+    "updateMessage": "Version 1.1.0 removes bug of not updating right click add option"
+}
