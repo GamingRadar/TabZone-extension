@@ -1,4 +1,5 @@
 const setupList = document.getElementById('setupList');
+const toggleButton = document.getElementById("toggle");
 
 // Load setups from storage and dynamically add buttons
 chrome.storage.sync.get('setups', (data) => {
@@ -25,3 +26,35 @@ chrome.storage.sync.get('setups', (data) => {
 document.getElementById('configureBtn').addEventListener('click', () => {
     chrome.runtime.openOptionsPage();
 });
+// Function to apply the theme
+function applyTheme(isDark) {
+    // Set background color for the popup-container
+    const popupContainer = document.querySelector(".popup-container");
+    if (popupContainer) {
+        popupContainer.style.backgroundColor = isDark ? "#0f1924" : "#ecf0f1";
+    }
+
+    // Set text color for titles and buttons
+    const titles = document.querySelectorAll("h1, p");
+    titles.forEach((title) => {
+        title.style.color = isDark ? "#ecf0f1" : "#2c3e50";
+    });
+
+    // Save preference to localStorage
+    localStorage.setItem("isDarkTheme", isDark ? "true" : "false");
+}
+
+// Function to initialize the theme
+function initializeTheme() {
+    const isDark = localStorage.getItem("isDarkTheme") === "true";
+    toggleButton.checked = isDark; // Set the toggle button state
+    applyTheme(isDark);
+}
+
+// Event listener for the toggle button
+toggleButton.addEventListener("change", () => {
+    applyTheme(toggleButton.checked);
+});
+
+// Initialize theme on load
+initializeTheme();
