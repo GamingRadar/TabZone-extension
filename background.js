@@ -34,7 +34,14 @@ function addTabToSetup(index, url) {
 
         // Save the updated list of setups back to storage
         chrome.storage.sync.set({ setups }, () => {
-            alert(`Tab added to ${setups[index].title}`);
+            // Display a notification after adding the tab
+            chrome.notifications.create({
+                type: 'basic',
+                iconUrl: 'icon.png', // Make sure to include an icon in your extension folder
+                title: 'Tab Added',
+                message: `Tab added to ${setups[index].title}`,
+                priority: 2
+            });
         });
     });
 }
