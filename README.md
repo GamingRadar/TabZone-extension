@@ -1,4 +1,4 @@
-# 🚀 TabZones Chrome Extension  
+# TabZones Chrome Extension  
 
 Do you ever find yourself opening the same tabs every time you sit down to work or study? Dictionary? Reference book? ChatGPT? Yeah, me too. It was driving me crazy! So, I decided to solve this once and for all with **TabZones**, my productivity game-changer.  
 
@@ -7,7 +7,11 @@ With TabZones, you can group your favorite tabs into zones like "Study" or "Job 
 I made this extension because I needed it. I’m an engineer, after all—it’s what we do! Now it’s here for you, and I hope it becomes your new superpower too. Let me know what you think—seriously, I’d love your feedback! ([LinkedIn](https://www.linkedin.com/in/devashishtambade/))
 
 ---
+## 🚀 New Update!!! (v1.2) 🎉
 
+I'm excited to bring you the latest update based on your feedback! 🌟 In this version, I’ve **introduced dark mode** for a sleek and modern experience. 🌙✨ Plus, I’ve added an awesome **export/import feature**! 🔄 Now you can easily **share your tabzones with friends** or even with the world, and import exclusive setups to level up your own! 🌍🎉 I’ve also squashed some bugs and fixed issues to ensure smoother performance and a better overall experience. 🙌 I hope these updates make your browsing even more efficient and fun!
+
+---
 ## 🔧 How to Use TabZones  
 
 ### 1️⃣ Get Started  
@@ -51,4 +55,4 @@ I got tired of wasting time setting up the same tabs every time I wanted to work
 ## 📬 Connect With Me  
 
 I’d love to hear your thoughts or suggestions! Feel free to reach out on LinkedIn:  
-[**Mr. Devashish Tambade**]([LinkedIn](https://www.linkedin.com/in/devashishtambade/))  
+([Mr. Devashish Tambade](https://www.linkedin.com/in/devashishtambade/))  
