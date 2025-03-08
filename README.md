@@ -10,6 +10,7 @@ I made this extension because I needed it. I’m an engineer, after all—it’s
 ##  New patch!!! (v1.3) 
 
 I'm excited to bring you the latest update based on your feedback! 🌟 In this version, I fixed the issue of removing the individual URL and also added a performance updates.
+
 ---
 ## 🚀 New Update!!! (v1.2) 🎉
 
