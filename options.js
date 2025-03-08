@@ -31,30 +31,30 @@ chrome.storage.sync.get('setups', (data) => {
         const li = document.createElement('li');
         li.classList.add('setup-item');
         li.innerHTML = `
-      <div class="zone" style="background-color: ${setup.color || '#ffffff'}">
-        <span class="setup-title">${setup.title}</span>
-        <div class="actions">
-          <button class="add-tab-btn green-btn">Add Tab</button>
-          <button class="edit-btn blue-btn">Edit</button>
-          <select class="color-dropdown">
-            ${colorOptions.map(option =>
+            <div class="zone" style="background-color: ${setup.color || '#ffffff'}">
+                <span class="setup-title">${setup.title}</span>
+                <div class="actions">
+                    <button class="add-tab-btn green-btn">Add Tab</button>
+                    <button class="edit-btn blue-btn">Edit</button>
+                    <select class="color-dropdown">
+                        ${colorOptions.map(option =>
             `<option value="${option.hex}" ${setup.color === option.hex ? 'selected' : ''}>${option.name}</option>`
         ).join('')}
-          </select>
-          <button class="delete-btn red-btn">Delete</button>
-        </div>
-        <div class="add-tab-form" style="display:none;">
-          <input type="text" class="tab-url" placeholder="Paste URL here..." />
-          <button class="submit-tab-btn green-btn">Submit</button>
-          <button class="cancel-tab-btn red-btn">Cancel</button>
-        </div>
-        <ul class="link-list">
-          ${setup.urls.map(url =>
-            `<li>${url} <button class="remove-tab-btn red-btn">X</button></li>`
+                    </select>
+                    <button class="delete-btn red-btn">Delete</button>
+                </div>
+                <div class="add-tab-form" style="display:none;">
+                    <input type="text" class="tab-url" placeholder="Paste URL here..." />
+                    <button class="submit-tab-btn green-btn">Submit</button>
+                    <button class="cancel-tab-btn red-btn">Cancel</button>
+                </div>
+                <ul class="link-list">
+                    ${setup.urls.map((url, urlIndex) =>
+            `<li>${url} <button class="remove-tab-btn red-btn" data-url-index="${urlIndex}">X</button></li>`
         ).join('')}
-        </ul>
-      </div>
-    `;
+                </ul>
+            </div>
+        `;
 
         // Change zone color when a new color is selected from the dropdown
         li.querySelector('.color-dropdown').addEventListener('change', (e) => {
@@ -97,6 +97,27 @@ chrome.storage.sync.get('setups', (data) => {
 
         // Delete the setup
         li.querySelector('.delete-btn').addEventListener('click', () => deleteSetup(index));
+
+        // Add event listeners for each remove button
+        li.querySelectorAll('.remove-tab-btn').forEach((button, urlIndex) => {
+            button.addEventListener('click', (e) => {
+                // Get the URL index from the data-url-index attribute
+                const urlIndex = e.target.getAttribute('data-url-index');
+
+                // Remove the URL from the setup.urls array
+                setup.urls.splice(urlIndex, 1);
+
+                // Save the updated setup array to chrome storage
+                chrome.storage.sync.get('setups', (data) => {
+                    const setups = data.setups || [];
+                    setups[index] = setup;  // Update the current setup with the new URLs
+                    chrome.storage.sync.set({ setups }, () => {
+                        alert(`Removed Link.`);
+                        location.reload(); // Reload the page to reflect changes
+                    });
+                });
+            });
+        });
 
         setupList.appendChild(li);
     });
