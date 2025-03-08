@@ -7,6 +7,10 @@ With TabZones, you can group your favorite tabs into zones like "Study" or "Job 
 I made this extension because I needed it. I’m an engineer, after all—it’s what we do! Now it’s here for you, and I hope it becomes your new superpower too. Let me know what you think—seriously, I’d love your feedback! ([LinkedIn](https://www.linkedin.com/in/devashishtambade/))
 
 ---
+##  New patch!!! (v1.3) 
+
+I'm excited to bring you the latest update based on your feedback! 🌟 In this version, I fixed the issue of removing the individual URL and also added a performance updates.
+---
 ## 🚀 New Update!!! (v1.2) 🎉
 
 I'm excited to bring you the latest update based on your feedback! 🌟 In this version, I’ve **introduced dark mode** for a sleek and modern experience. 🌙✨ Plus, I’ve added an awesome **export/import feature**! 🔄 Now you can easily **share your tabzones with friends** or even with the world, and import exclusive setups to level up your own! 🌍🎉 I’ve also squashed some bugs and fixed issues to ensure smoother performance and a better overall experience. 🙌 I hope these updates make your browsing even more efficient and fun!
